@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import { styles } from "@/styles/link/style";
+import { styles } from "@/styles/link";
 import { MaterialIcons } from "@expo/vector-icons";
 import { colors } from "@/styles/colors";
 

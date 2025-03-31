@@ -1,4 +1,4 @@
-import { styles } from "@/styles/category/styles";
+import { styles } from "@/styles/category";
 import { colors } from "@/styles/colors";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Pressable, PressableProps, Text } from "react-native";

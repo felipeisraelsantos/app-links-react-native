@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    container:{
+    container: {
         flexDirection: "row",
         alignItems: "center",
-        gap:5
+        gap: 5
     },
-    name:{
+    name: {
         fontSize: 16,
         fontWeight: "600"
     },
-    
+
 })
