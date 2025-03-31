@@ -3,6 +3,7 @@ import { styles } from "@/styles/index/index";
 import { MaterialIcons } from "@expo/vector-icons";
 import { colors } from "@/styles/colors";
 import { Categories } from "@/components/categories";
+import { Link } from "@/components/link";
 
 export default function Index() {
   return (
@@ -14,6 +15,12 @@ export default function Index() {
         </TouchableOpacity>
       </View>
       <Categories />
+      <Link
+        name="Rockeseat"
+        url="https://www.rockeseat.som.br/"
+        onDetails={() => console.log("clicou")
+        }
+        />
     </View>
   );
 }
