@@ -1,6 +1,7 @@
 import {
     FlatList,
     Image,
+    Modal,
     Text,
     Touchable,
     TouchableOpacity,
@@ -43,6 +44,26 @@ export default function Index() {
                 contentContainerStyle={styles.linksContent}
                 showsVerticalScrollIndicator={false}
             />
+            <Modal transparent visible={true}>
+                <View style={styles.modal}>
+                    <View style={styles.modalContent}>
+                        <View style={styles.modalHeader}>
+                            <Text style={styles.modalCategory}>Curso</Text>
+                            <TouchableOpacity>
+                                <MaterialIcons
+                                    name="close"
+                                    size={20}
+                                    color={colors.gray[400]}
+                                />
+                            </TouchableOpacity>
+                        </View>
+                        <Text style={styles.modalLinkName}>Rockeseat</Text>
+                        <Text style={styles.modalUrl}>
+                            https://www.rocketseat.com.br/
+                        </Text>
+                    </View>
+                </View>
+            </Modal>
         </View>
     );
 }
