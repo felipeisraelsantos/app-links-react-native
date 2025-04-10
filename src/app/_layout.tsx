@@ -7,7 +7,7 @@ export default function Layout() {
 
     return <Stack
         screenOptions={{
-            headerShown: false, // configuração para que a rota nào aparecça no cabeçalho
+            headerShown: false, // configuraÃ§Ã£o para que a rota nÃ£o apareÃ§a no cabeÃ§alho
             contentStyle: {
                 backgroundColor
             }
