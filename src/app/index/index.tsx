@@ -1,10 +1,11 @@
+import { useState } from "react";
 import {
-    FlatList,
+    Text,
+    View,
     Image,
     Modal,
-    Text,
+    FlatList,
     TouchableOpacity,
-    View,
 } from "react-native";
 import { styles } from "@/styles/index/index";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -13,8 +14,11 @@ import { Categories } from "@/components/categories";
 import { Link } from "@/components/link";
 import { Option } from "@/components/option";
 import { router } from "expo-router";
+import { categories } from "@/utils/categories";
 
 export default function Index() {
+    const [category, setCategory] = useState(categories[0].name)
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -30,7 +34,7 @@ export default function Index() {
                     />
                 </TouchableOpacity>
             </View>
-            <Categories />
+            <Categories onChange={setCategory} selected={category} />
             <FlatList
                 data={["1", "2", "3"]}
                 keyExtractor={(item) => item}
