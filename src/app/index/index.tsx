@@ -7,6 +7,7 @@ import {
     FlatList,
     TouchableOpacity,
     Alert,
+    Linking,
 } from "react-native";
 import { styles } from "@/styles/index/index";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -60,6 +61,16 @@ export default function Index() {
         setShowModal(true);
         setLink(selected);
     }
+
+    async function handleOpen() {
+        try {
+          await Linking.openURL(link.url)
+          setShowModal(false)
+        } catch (error) {
+          Alert.alert("Erro", "Não foi possível abrir o link")
+          console.log(error)
+        }
+      }
 
     useFocusEffect(
         useCallback(() => {
@@ -122,7 +133,7 @@ export default function Index() {
                         </Text>
                         <View style={styles.modalFooter}>
                             <Option name="Excluir" icon="delete" variant="secondary" onPress={handleRemove} />
-                            <Option name="Abrir" icon="language" />
+                            <Option name="Abrir" icon="language" onPress={handleOpen} />
                         </View>
                     </View>
                 </View>
