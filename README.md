@@ -1,15 +1,21 @@
-## App com react-native e typescript
+## 📱 Projeto: App Links com React Native + TypeScript
 
-### Criando projeto
+O repositório [app-links-react-native](https://github.com/felipeisraelsantos/app-links-react-native) é um projeto desenvolvido com **React Native** e **TypeScript**, utilizando o framework **Expo**. O objetivo principal é demonstrar como gerenciar e manipular links dentro de um aplicativo móvel, oferecendo uma base sólida para implementações de deep linking e armazenamento local.
+
+**App com react-native e typescript**
+
+Caso queira criar projeto com react-native e typescript
 
 ~~~bash
 
 npx create-expo-app@latest --template
 ~~~
 
-https://icons.expo.fyi/Index
+### 🚀 Tecnologias e Ferramentas Utilizadas
 
-npx expo install @react-native-async-storage/async-storage
+- **React Native com Expo** Facilita o desenvolvimento e a execução do aplicativo em múltiplas plataforma.
+- **TypeScript** Proporciona tipagem estática, melhorando a qualidade e a manutenção do códig.
+- **AsyncStorage** Utilizado para armazenar dados localmente no dispositivo do usuário de forma assíncrona e persistent.
 
 O AsyncStorage é uma API utilizada principalmente em aplicações React Native para armazenamento persistente de dados de forma assíncrona. Funciona como uma espécie de banco de dados simples, permitindo que você salve e recupere dados no dispositivo do usuário de maneira eficiente. Aqui estão os principais pontos:
 
@@ -25,8 +31,8 @@ O AsyncStorage é uma API utilizada principalmente em aplicações React Native 
 
 Em resumo, o AsyncStorage é uma ferramenta poderosa para gerenciar dados locais de forma assíncrona em aplicações móveis React Native, proporcionando uma experiência de usuário mais fluida e responsiva.
 
-Baseado em
-          chave : valor
+```
+Baseado em chave : valor
 
 name: Fulano
 
@@ -38,3 +44,66 @@ links: [
         name: "Ciclano"
     }
 ]
+```
+
+- **Expo Icons** Para a inclusão de ícones personalizados na interface do aplicativo.
+https://icons.expo.fyi/Index
+
+### 📁 Estrutura do Projeto
+
+O projeto está organizado da seguinte forma:
+
+```
+app-links-react-native/
+├── .vscode/
+├── assets/
+│   └── images/
+├── src/
+├── .editorconfig
+├── .gitignore
+├── README.md
+├── app.json
+├── package-lock.json
+├── package.json
+├── tsconfig.json
+```
+- **assets/images/*: Contém as imagens utilizadas no aplicatio.
+- **src/*: Diretório principal onde reside o código-fonte da aplicaço.
+- **package.json*: Gerencia as dependências e scripts do projeo.
+- **tsconfig.json*: Configurações específicas do TypeScrit.
+
+### 🧠 Funcionalidades Implementadas
+
+- **Gerenciamento de Links**: Permite adicionar, editar e excluir links dentro do aplicatvo.
+- **Armazenamento Persistente**: Utiliza o AsyncStorage para salvar os links, garantindo que os dados permaneçam mesmo após o fechamento.
+- **Interface Intuitiva**: Design simples e funcional para facilitar a navegação e a usabilidde.
+
+### 📦 Como Executar o Projeto
+
+1. **Clone o repositório**:
+
+   ```bash
+   git clone https://github.com/felipeisraelsantos/app-links-react-native.git
+   cd app-links-react-native
+   ```
+2. **Instale as dependências**:
+
+   ```bash
+   npm install
+   ```
+3. **Instale o AsyncStorage**:
+
+   ```bash
+   npx expo install @react-native-async-storage/async-storage
+   ```
+4. **Inicie o aplicativo**:
+
+   ```bash
+   npx expo start
+   ```
+
+Após esses passos, você poderá visualizar e interagir com o aplicativo em um emulador ou dispositivo fíico.
+
+### 📌 Considerações Finais
+
+Este projeto serve como uma excelente base para desenvolvedores que desejam entender e implementar o gerenciamento de links em aplicativos React Native. Com uma estrutura clara e o uso de tecnologias modernas, é um ponto de partida ideal para expandir funcionalidades relacionadas a deep linking e armazenamento local.
