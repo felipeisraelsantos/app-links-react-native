@@ -19,6 +19,8 @@ import { categories } from "@/utils/categories";
 import { LinkStorage, linkStorage } from "@/storage/link-storage";
 
 export default function Index() {
+    const [showModal, setShowModal] = useState(false);
+    const [link, setLink] = useState<LinkStorage>({} as LinkStorage);
     const [links, setLinks] = useState<LinkStorage[]>([]);
     const [category, setCategory] = useState(categories[0].name);
 
@@ -34,6 +36,11 @@ export default function Index() {
         } catch (error) {
             Alert.alert("Erro", "Não foi possível listar os links");
         }
+    }
+
+    function handleDetails(selected: LinkStorage) {
+        setShowModal(true);
+        setLink(selected);
     }
 
     useFocusEffect(
@@ -65,19 +72,23 @@ export default function Index() {
                     <Link
                         name={item.name}
                         url={item.url}
-                        onDetails={() => console.log("Clicou!")}
+                        onDetails={() => handleDetails(item)}
                     />
                 )}
                 style={styles.links}
                 contentContainerStyle={styles.linksContent}
                 showsVerticalScrollIndicator={false}
             />
-            <Modal transparent visible={false}>
+            <Modal transparent visible={showModal} animationType="slide">
                 <View style={styles.modal}>
                     <View style={styles.modalContent}>
                         <View style={styles.modalHeader}>
-                            <Text style={styles.modalCategory}>Curso</Text>
-                            <TouchableOpacity>
+                            <Text style={styles.modalCategory}>
+                                {link.category}
+                            </Text>
+                            <TouchableOpacity
+                                onPress={() => setShowModal(false)}
+                            >
                                 <MaterialIcons
                                     name="close"
                                     size={20}
@@ -85,11 +96,12 @@ export default function Index() {
                                 />
                             </TouchableOpacity>
                         </View>
-                        <Text style={styles.modalLinkName}>Rockeseat</Text>
-                        <Text style={styles.modalUrl}>
-                            https://www.rocketseat.com.br/
+                        <Text style={styles.modalLinkName}>
+                            {link.name}
                         </Text>
-
+                        <Text style={styles.modalUrl}>
+                            {link.url}
+                        </Text>
                         <View style={styles.modalFooter}>
                             <Option
                                 name="Excluir"
