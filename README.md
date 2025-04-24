@@ -106,4 +106,4 @@ Após esses passos, você poderá visualizar e interagir com o aplicativo em um 
 
 ### 📌 Considerações Finais
 
-Este projeto serve como uma excelente base para desenvolvedores que desejam entender e implementar o gerenciamento de links em aplicativos React Native. Com uma estrutura clara e o uso de tecnologias modernas, é um ponto de partida ideal para expandir funcionalidades relacionadas a deep linking e armazenamento local.
+Este projeto serve como uma excelente base para desenvolvedores que desejam entender e implementar o gerenciamento de links em aplicativos React Native. Com uma estrutura clara e o uso de tecnologias modernas, é um ponto de partida ideal para expandir funcionalidades relacionadas a deep linking e armazenamento local.
