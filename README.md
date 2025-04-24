@@ -102,7 +102,7 @@ app-links-react-native/
    npx expo start
    ```
 
-Após esses passos, você poderá visualizar e interagir com o aplicativo em um emulador ou dispositivo fíico.
+Após esses passos, você poderá visualizar e interagir com o aplicativo em um emulador ou dispositivo físico.
 
 ### 📌 Considerações Finais
 
